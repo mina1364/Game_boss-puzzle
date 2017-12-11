@@ -1,0 +1,93 @@
+<html><head><style>
+#picture{height:200px;width:200px;}
+</style>
+<script>
+onload = function(){
+ 	init()
+}
+
+function init(){
+
+//The parent of div_1, div_2, div_3
+var div_main = document.createElement('div')
+div_main.id  = 'div_main'
+document.body.appendChild(div_main)
+
+// the div_main and its thr children
+
+var div1 = document.getElementById('div_main')
+var div = new Array();
+for(i=1; i<=3; i++){
+  div[i]=document.createElement('div')
+  div[i].id ='div_'+i
+div1.appendChild(div[i])
+}
+div1.style.float='right'
+// the first child of div_main and its own children
+
+var div2 = document.getElementById('div_1')
+var div = new Array();
+for(i=1; i<=3; i++){
+  div[i]=document.createElement('div')
+  div[i].id ='div_'+1+'_'+i
+div2.appendChild(div[i])
+var images = document.createElement('img')
+images.id = 'picture'+i
+images.src = 'images/image'+i+'.png'
+div[i].appendChild(images)
+}
+div2.style.float='right'
+
+// the second child of div_main and its own children
+
+var div3 = document.getElementById('div_2')
+var div = new Array();
+for(i=1; i<=3; i++){
+  div[i]=document.createElement('div')
+  div[i].id ='div_'+2+'_'+i
+div3.appendChild(div[i])
+
+var images = document.createElement('img')
+images.id = 'picture'+(i+3)
+images.src = 'images/image'+(i+3)+'.png'
+div[i].appendChild(images)
+
+}
+div3.style.float='right'
+
+// the third child of div_main and its own children
+
+var div4 = document.getElementById('div_3')
+var div = new Array();
+for(i=1; i<=3; i++){
+  div[i]=document.createElement('div')
+  div[i].id ='div_'+3+'_'+i
+div4.appendChild(div[i])
+if(i<3){
+var images = document.createElement('img')
+images.id = 'picture'+(i+6)
+images.src = 'images/image'+(i+6)+'.png'
+div[i].appendChild(images)
+}
+// var parent = document.getElementById('div_3_3')
+// var child  = document.getElementById('picture9')
+// // if(parent != null){
+// this.removechild(child)
+// }
+}
+
+div4.style.float='right'
+// for(i=1;i<=8;i++){
+// var images = document.createElement('img')
+// images.id = 'picture'
+// images.src = 'images/image'+i+'.png'
+// div[i].appendChild(images)
+//
+// }
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>
