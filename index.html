@@ -1,0 +1,60 @@
+<html><head><style>	#div1{height:300px; background-color: cyan;}
+</style>
+<script>
+onload = function(){
+ 	init()
+}
+
+function init(){
+//The parent of div_1, div_2, div_3
+var div_main = document.createElement('div')
+div_main.id  = 'div_main'
+document.body.appendChild(div_main)
+
+// the div_main and its thr children
+
+var div1 = document.getElementById('div_main')
+var div = new Array();
+for(i=1; i<=3; i++){
+  div[i]=document.createElement('div')
+  div[i].id ='div_'+i
+div1.appendChild(div[i])
+}
+
+// the first child of div_main and its own children
+
+var div2 = document.getElementById('div_1')
+var div = new Array();
+for(i=1; i<=3; i++){
+  div[i]=document.createElement('div')
+  div[i].id ='div_'+1+'_'+i
+div2.appendChild(div[i])
+}
+
+// the second child of div_main and its own children
+
+var div3 = document.getElementById('div_2')
+var div = new Array();
+for(i=1; i<=3; i++){
+  div[i]=document.createElement('div')
+  div[i].id ='div_'+2+'_'+i
+div3.appendChild(div[i])
+}
+
+// the third child of div_main and its own children
+
+var div4 = document.getElementById('div_3')
+var div = new Array();
+for(i=1; i<=3; i++){
+  div[i]=document.createElement('div')
+  div[i].id ='div_'+3+'_'+i
+div4.appendChild(div[i])
+}
+
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>
