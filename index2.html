@@ -1,5 +1,6 @@
 <html><head><style>
 #picture{height:200px;width:200px;}
+
 </style>
 <script>
 onload = function(){
@@ -12,8 +13,9 @@ function init(){
 var div_main = document.createElement('div')
 div_main.id  = 'div_main'
 document.body.appendChild(div_main)
+div_main.style.marginRight='600px';
 
-// the div_main and its thr children
+// the div_main and its three children
 
 var div1 = document.getElementById('div_main')
 var div = new Array();
@@ -21,8 +23,9 @@ for(i=1; i<=3; i++){
   div[i]=document.createElement('div')
   div[i].id ='div_'+i
 div1.appendChild(div[i])
+
 }
-div1.style.float='right'
+// div1.style.float='right'
 // the first child of div_main and its own children
 
 var div2 = document.getElementById('div_1')
@@ -32,7 +35,7 @@ for(i=1; i<=3; i++){
   div[i].id ='div_'+1+'_'+i
 div2.appendChild(div[i])
 var images = document.createElement('img')
-images.id = 'picture'+i
+images.id = 'picture'
 images.src = 'images/image'+i+'.png'
 div[i].appendChild(images)
 }
@@ -48,7 +51,7 @@ for(i=1; i<=3; i++){
 div3.appendChild(div[i])
 
 var images = document.createElement('img')
-images.id = 'picture'+(i+3)
+images.id = 'picture'
 images.src = 'images/image'+(i+3)+'.png'
 div[i].appendChild(images)
 
@@ -65,18 +68,30 @@ for(i=1; i<=3; i++){
 div4.appendChild(div[i])
 if(i<3){
 var images = document.createElement('img')
-images.id = 'picture'+(i+6)
+images.id = 'picture'
 images.src = 'images/image'+(i+6)+'.png'
 div[i].appendChild(images)
-}
-// var parent = document.getElementById('div_3_3')
-// var child  = document.getElementById('picture9')
-// // if(parent != null){
-// this.removechild(child)
-// }
+  }
 }
 
 div4.style.float='right'
+
+// for(i=1;i<=9;i++){
+//   'div_'+i+'_'+i.style.border= '1px solid blue';
+// }
+// for (i = 1; i <= 9; i++) {
+//   document.getElementById('div_' + i).style.border = '1px solid blue';
+
+// }
+for(i=1;i<=3;i++){
+	for(j=1;j<=3;j++){
+		  document.getElementById('div_' + i +'_'+ j).style.border = '1px solid blue';
+		  document.getElementById('div_' + i +'_'+ j).style.height= '200px';
+		  document.getElementById('div_' + i +'_'+ j).style.width= '200px';
+
+	}		
+}
+
 // for(i=1;i<=8;i++){
 // var images = document.createElement('img')
 // images.id = 'picture'
